@@ -117,7 +117,7 @@ const AvailableNow = () => {
                 src={movie.bannerImage}
                 alt={movie.name}
                 className="w-full h-44 object-cover rounded-lg group-hover:rounded-b-none  border-2  border-transparent group-hover:border-x-primary group-hover:border-t-primary "
-                // Define the CSS variable for image height
+                
               />
               {/* details */}
               <div className="DivCardScale  overflow-hidden">
