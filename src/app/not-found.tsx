@@ -8,7 +8,7 @@ export default function NotFound() {
           <div className="text-center">
             <h1 className="text-6xl font-bold text-white mb-4">404</h1>
             <p className="text-xl text-white mb-8">
-              Oops! The page you're looking for doesn't exist.
+              Oops! The page you re looking for doesn t exist.
             </p>
             <div className="flex items-center justify-center my-10">
               <Clapperboard color="green" size={100} />
