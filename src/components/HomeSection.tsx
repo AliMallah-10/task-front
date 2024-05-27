@@ -75,6 +75,10 @@ const HomeSection = () => {
                   src={video.portraitImage}
                   alt={video.name}
                   className="w-full h-full object-cover rounded-lg"
+                  width={400}
+                  height={0}
+                  // layout="responsive"
+                  quality={100}
                 />
               </div>
             ))}
@@ -96,6 +100,10 @@ const HomeSection = () => {
                     src={movie.bannerImage}
                     alt={movie.name}
                     className="w-full h-full object-cover"
+                    width={500}
+                    height={400}
+                    // layout="responsive"
+                    quality={100}
                   />
                   <div className="absolute  bg-gradient-to-t bottom-0 left-0 right-0 h-1/2 from-black via-black/90 via-30% to-transparent "></div>
                   <div className="absolute  bg-gradient-to-l bottom-0  right-0 h-full w-full  from-black via-black/10 via-20% to-transparent "></div>
@@ -104,9 +112,7 @@ const HomeSection = () => {
                 <div className="absolute inset-0 flex justify-between items-end px-8 pb-10 pr-20 bottom-10">
                   <div className="flex flex-col items-start gap-5">
                     <div className="flex items-center justify-center">
-                      <h1
-                        className="text-4xl"
-                      >
+                      <h1 className="text-4xl">
                         {/* {movie.name} */}
                         {t(`WebMainslider.${movie.name}.name`)}
                       </h1>
@@ -140,7 +146,9 @@ const HomeSection = () => {
                         locale === "ar" ? "max-w-[60%] text-2xl" : ""
                       }`}
                     >
-                      {locale === "ar" ? movie.description : t(`WebMainslider.${movie.name}.name`)}
+                      {locale === "ar"
+                        ? movie.description
+                        : t(`WebMainslider.${movie.name}.name`)}
                     </h3>
                     <div className="flex items-start gap-3">
                       <button className="btnSub bg-success text-black text-[15px] font-semibold px-6 py-3 rounded-2xl ">

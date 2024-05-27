@@ -99,11 +99,19 @@ const OriginalShows = () => {
                   src={movie.bannerImage}
                   alt={movie.name}
                   className="w-full h-80 object-cover rounded-lg group-hover:hidden"
+                  width={400}
+                  height={0}
+                  // layout="responsive"
+                  quality={100} 
                 />
                 <Image
                   src={movie.landscapeImage}
                   alt={movie.name}
                   className="w-full h-80 object-cover rounded-lg hidden group-hover:block"
+                  width={400}
+                  height={0}
+                  // layout="responsive"
+                  quality={100} 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 overflow-hidden rounded-b-md transition-max-height duration-600 ease-in-out opacity-0 max-h-0 group-hover:max-h-full group-hover:opacity-100 px-5 p-5">

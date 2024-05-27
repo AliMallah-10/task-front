@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { getLangDir } from "rtl-detect";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ interface RootLayoutProps {
     locales: string;
   };
 }
-
 export default async function RootLayout({
   children,
   params: { locales },
@@ -28,8 +26,9 @@ export default async function RootLayout({
   const messages = await getMessages();
   const locale = await getLocale();
   const direction = getLangDir(locale);
+
   return (
-    <html lang={locales} dir={direction}>
+    <html lang={locales} dir={direction}  >
       <body
         className={`${inter.className} bg-[#010028] text-[#f2f2f2] text-lg  overflow-x-hidden`}
       >
