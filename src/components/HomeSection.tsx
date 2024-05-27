@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Crown, Plus } from "lucide-react";
 import { useTranslations, useLocale, useMessages } from "next-intl";
+import Image from "next/image";
 
 const HomeSection = () => {
   const t = useTranslations();
@@ -70,7 +71,7 @@ const HomeSection = () => {
                     <Crown height={15} />
                   )}
                 </div>
-                <img
+                <Image
                   src={video.portraitImage}
                   alt={video.name}
                   className="w-full h-full object-cover rounded-lg"
@@ -91,7 +92,7 @@ const HomeSection = () => {
             {movies.map((movie, index) => (
               <SwiperSlide key={index}>
                 <div className="relative w-full h-screen">
-                  <img
+                  <Image
                     src={movie.bannerImage}
                     alt={movie.name}
                     className="w-full h-full object-cover"

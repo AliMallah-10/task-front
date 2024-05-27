@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { SearchBarProps, Movie } from "@/types/interfaces";
 import { Search, Play, Plus } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const SearchBar: React.FC<SearchBarProps> = ({ isVisible, onClose }) => {
   const t = useTranslations();
@@ -65,7 +66,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ isVisible, onClose }) => {
                   <div className="absolute top-0 left-0 font-bold text-sm bg-slate-900/60 text-primary px-2 py-1.5 rounded-tl-lg rounded-br-md">
                     Free
                   </div>
-                  <img
+                  <Image
                     src={movie.landscapeImage}
                     height={100}
                     width={100}

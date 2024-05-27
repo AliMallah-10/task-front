@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Movie } from "@/types/interfaces";
 import { Crown, Play, Plus } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const OriginalShows = () => {
   const t = useTranslations();
@@ -94,12 +95,12 @@ const OriginalShows = () => {
                 <div className="absolute top-0 left-0 font-bold text-sm bg-slate-900/60 text-primary px-2 py-1.5 rounded-tl-lg rounded-br-md">
                   <Crown height={18} />
                 </div>
-                <img
+                <Image
                   src={movie.bannerImage}
                   alt={movie.name}
                   className="w-full h-80 object-cover rounded-lg group-hover:hidden"
                 />
-                <img
+                <Image
                   src={movie.landscapeImage}
                   alt={movie.name}
                   className="w-full h-80 object-cover rounded-lg hidden group-hover:block"

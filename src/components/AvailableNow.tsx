@@ -11,6 +11,7 @@ import { headingTitles } from "@/constants/headingTitles";
 import { Movie } from "@/types/interfaces";
 import { Play, Plus } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 // SwiperCore.use([Navigation, Pagination]);
 
 const AvailableNow = () => {
@@ -113,7 +114,7 @@ const AvailableNow = () => {
               <div className="absolute top-0 left-0 font-bold text-sm bg-slate-900/60 text-primary px-2 py-1.5 rounded-tl-lg rounded-br-md ">
                 Free
               </div>
-              <img
+              <Image
                 src={movie.bannerImage}
                 alt={movie.name}
                 className="w-full h-44 object-cover rounded-lg group-hover:rounded-b-none  border-2  border-transparent group-hover:border-x-primary group-hover:border-t-primary "
