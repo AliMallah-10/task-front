@@ -29,7 +29,7 @@ const Footer = () => {
               </Link>
             </li>
           ))}
-          <li>&copy;{` ${currentYear} `}</li>{" "}
+          <li>©{` ${currentYear} `}</li>{" "}
         </ul>
 
         <div className="flex justify-between items-center gap-6 soicalH">
